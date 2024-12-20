@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # 随机US节点
-cities=("atl" "bos" "den" "dfw" "ewr" "iad" "mia" "ord" "cdg")
+cities=("atl" "bos" "den" "dfw" "ewr" "iad" "mia" "ord")
 index=$(($RANDOM % ${#cities[@]}))
 selected_city=${cities[$index]}
 
 # 输出toml部署文件
 cat > fly.toml << EOF
-# fly.toml file 
+# fly.toml file generated for hells on 2023-04-22T08:17:40Z
 
 app = "${FLY_APP_NAME}"
 kill_signal = "SIGINT"
